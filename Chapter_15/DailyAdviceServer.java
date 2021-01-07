@@ -18,9 +18,9 @@ public class DailyAdviceServer {
 				writer.close(); // We're done with this particular client, so close the connections
 				System.out.println(advice);
 			}
-	} catch (IOException ex) {
-		ex.printStackTrace();
-	}
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		}
 	}
 	
 	private String getAdvice() {
@@ -28,7 +28,7 @@ public class DailyAdviceServer {
 		return adviceList[random];
 	}
 	
-	private static void main(String[] args) {
+	public static void main(String[] args) {
 		DailyAdviceServer server = new DailyAdviceServer();
 		server.go();
 	}
